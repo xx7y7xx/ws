@@ -20,7 +20,7 @@ wss.on('connection', function connection(ws) {
   });
 });
 
-server.listen(function listening() {
+server.listen(8080, function listening() {
   //
   // If the `rejectUnauthorized` option is not `false`, the server certificate
   // is verified against a list of well-known CAs. An 'error' event is emitted
@@ -29,7 +29,7 @@ server.listen(function listening() {
   // The certificate used in this example is self-signed so `rejectUnauthorized`
   // is set to `false`.
   //
-  const ws = new WebSocket(`wss://localhost:${server.address().port}`, {
+  const ws = new WebSocket(`wss://localhost:8080`, {
     rejectUnauthorized: false
   });
 
